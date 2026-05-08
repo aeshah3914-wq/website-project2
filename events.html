@@ -2,110 +2,98 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Events</title>
-
-  <!-- Bootstrap -->
+  <title>Events - University System</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* لمسة إضافية لتوحيد حجم الصور */
+    .card-img-top {
+        height: 200px;
+        object-fit: cover; /* عشان الصورة ما تطلعش مضغوطة */
+    }
+  </style>
 </head>
+<body class="bg-light">
 
-<body>
-
-<!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
   <div class="container">
     <a class="navbar-brand" href="#">University System</a>
-
-    <div>
-      <a class="nav-link text-white" href="index.html">Register</a>
-      <a class="nav-link text-white" href="students.html">Students</a>
-      <a class="nav-link text-white" href="events.html">Events</a>
-      <a class="nav-link text-white" href="room.html">Rooms</a>
-      <a class="nav-link text-white" href="clubs.html">Clubs</a>
-      <a class="nav-link text-white" href="dashboard.html">Dashboard</a>
-      <a class="nav-link text-white" href="layout.html">Layout</a>
+    <div class="ms-auto d-flex">
+      <a class="nav-link text-white px-2" href="index.html">Register</a>
+      <a class="nav-link text-white px-2" href="students.html">Students</a>
+      <a class="nav-link text-white px-2" href="events.html">Events</a>
+      <a class="nav-link text-white px-2" href="room.html">Rooms</a>
+      <a class="nav-link text-white px-2" href="clubs.html">Clubs</a>
+      <a class="nav-link text-white px-2" href="dashboard.html">Dashboard</a>
+      <a class="nav-link text-white px-2" href="layout.html">Layout</a>
     </div>
   </div>
 </nav>
 
-<!-- Event Form -->
 <div class="container mt-5">
-  <div class="card p-4 mb-4">
-    <h3>Create Event</h3>
-
+  <div class="card p-4 mb-5 shadow-sm">
+    <h3 class="fw-bold mb-3">Create Event</h3>
     <form>
       <input class="form-control mb-2" placeholder="Event Title" required>
-      <textarea class="form-control mb-2" placeholder="Description" required></textarea>
+      <textarea class="form-control mb-2" placeholder="Description" rows="3" required></textarea>
       <input type="date" class="form-control mb-2" required>
-
-      <select class="form-select mb-2">
+      <select class="form-select mb-3">
         <option>Workshop</option>
         <option>Seminar</option>
       </select>
-
-      <button class="btn btn-success">Create</button>
+      <button class="btn btn-success px-4">Create</button>
     </form>
   </div>
 
-  <!-- Event Gallery -->
-  <h3 class="mb-3">Upcoming Events</h3>
-
+  <h3 class="mb-4 fw-bold">Upcoming Events</h3>
   <div class="row">
 
-    <!-- Event 1 -->
     <div class="col-md-4 mb-4">
-      <div class="card">
-        <img src="https://via.placeholder.com/300" class="card-img-top">
-
+      <div class="card h-100 shadow-sm">
+        <img src="https://images.unsplash.com/photo-1593720213428-28a5b9e94613?q=80&w=500&auto=format&fit=crop" class="card-img-top" alt="Web Development">
         <div class="card-body">
-          <h5 class="card-title">Web Workshop</h5>
-          <p class="card-text">Learn HTML & CSS</p>
-
-          <span class="badge bg-primary">Open</span>
-
-          <br><br>
-          <button class="btn btn-primary">Register</button>
+          <h5 class="card-title fw-bold">Web Workshop</h5>
+          <p class="card-text text-muted">Learn HTML, CSS & Bootstrap to build modern websites.</p>
+          <span class="badge bg-primary mb-3">Open</span>
+          <div class="d-grid">
+            <button class="btn btn-outline-primary">Register</button>
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- Event 2 -->
     <div class="col-md-4 mb-4">
-      <div class="card">
-        <img src="https://via.placeholder.com/300" class="card-img-top">
-
+      <div class="card h-100 shadow-sm">
+        <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=500&auto=format&fit=crop" class="card-img-top" alt="Artificial Intelligence">
         <div class="card-body">
-          <h5 class="card-title">AI Seminar</h5>
-          <p class="card-text">Introduction to AI</p>
-
-          <span class="badge bg-danger">Full</span>
-
-          <br><br>
-          <button class="btn btn-secondary">Closed</button>
+          <h5 class="card-title fw-bold">AI Seminar</h5>
+          <p class="card-text text-muted">Introduction to Artificial Intelligence and Future Tech.</p>
+          <span class="badge bg-danger mb-3">Full</span>
+          <div class="d-grid">
+            <button class="btn btn-secondary disabled">Closed</button>
+          </div>
         </div>
       </div>
     </div>
 
-    <link rel="stylesheet" href="style.css">
-
-    <!-- Event 3 -->
     <div class="col-md-4 mb-4">
-      <div class="card">
-        <img src="https://via.placeholder.com/300" class="card-img-top">
-
+      <div class="card h-100 shadow-sm">
+        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=500&auto=format&fit=crop" class="card-img-top" alt="Coding Competition">
         <div class="card-body">
-          <h5 class="card-title">Coding Competition</h5>
-          <p class="card-text">اختبر مهاراتك البرمجية</p>
-
-          <span class="badge bg-primary">Open</span>
-
-          <br><br>
-          <button class="btn btn-primary">Register</button>
+          <h5 class="card-title fw-bold">Coding Competition</h5>
+          <p class="card-text text-muted">اختبر مهاراتك البرمجية في تحدي المبرمجين السنوي.</p>
+          <span class="badge bg-primary mb-3">Open</span>
+          <div class="d-grid">
+            <button class="btn btn-outline-primary">Register</button>
+          </div>
         </div>
       </div>
     </div>
 
   </div>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
